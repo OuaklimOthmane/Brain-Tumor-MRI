@@ -2,6 +2,8 @@
 
 Projet académique de Machine Learning : classification automatique de tumeurs cérébrales à partir d'images IRM en utilisant des **features manuelles** (histogramme, texture, contours Laplacian) et deux classifieurs classiques (**KNN** et **Random Forest**), avec une **interface web Flask** pour tester le modèle en uploadant une IRM.
 
+![NeuroScan — vue avec prédiction](assets/02-prediction.png)
+
 ---
 
 ## À propos du projet
@@ -54,6 +56,17 @@ Le diagnostic des tumeurs cérébrales repose sur l'analyse d'images IRM par des
 | **Random Forest** (200 arbres) | ~85 % | ~84 % |
 
 Le Random Forest dépasse le KNN sur cette tâche, principalement grâce à sa capacité à modéliser les **interactions non-linéaires** entre features.
+
+<table>
+  <tr>
+    <td align="center"><strong>Matrice de confusion (KNN)</strong></td>
+    <td align="center"><strong>Comparaison KNN vs Random Forest</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/03-confusion-matrix.png" alt="Matrice de confusion KNN"></td>
+    <td><img src="assets/04-model-comparison.png" alt="Comparaison KNN vs Random Forest"></td>
+  </tr>
+</table>
 
 ---
 
@@ -173,6 +186,17 @@ Puis ouvrir http://127.0.0.1:5000 dans le navigateur.
 ---
 
 ## Utilisation de l'app
+
+<table>
+  <tr>
+    <td align="center"><strong>Interface vide</strong></td>
+    <td align="center"><strong>Après analyse</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/01-empty.png" alt="État initial de l'app"></td>
+    <td><img src="assets/02-prediction.png" alt="App après analyse"></td>
+  </tr>
+</table>
 
 1. **Glisser-déposer** une IRM (JPG ou PNG) sur la zone d'upload — ou cliquer pour parcourir
 2. Cliquer sur **"Analyser l'image"**
